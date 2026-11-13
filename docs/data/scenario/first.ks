@@ -1,46 +1,46 @@
 *start
 
-[title name="走るか寝るかするメロス"]
+[title name="量子改札 ― 終電までに3つの改札"]
 [hidemenubutton]
 [wait time=200]
 [freeimage layer="base"]
+[cm]
 
-「走るか寝るかするメロス」[l][r]
+[eval exp="f.fare = 3"]
+[eval exp="f.time = 40"]
+[eval exp="f.lucky = 0"]
+[eval exp="f.clear = 0"]
 
-メロスは激怒した。[l][r]
+[bg storage="night.png" time=500]
 
-必ず、かの邪智暴虐の王を除かねばならぬと決意した。[l][r]
+【 量子改札 】[r]
+― 終電までに3つの改札 ―[r][r]
 
-(中略)[l][r]
-
-ああ、何もかも、ばかばかしい。私は、醜い裏切り者だ。どうとも、勝手にするがよい。やんぬる哉。[l][r]
-メロスは...[l][r]
-
-[link target=*tag_sleep] →寝る [endlink][r]
-[link target=*tag_run] →走る [endlink][r]
+[glink text="はじめる" target="*intro" x=490 y=420 width=300 size=28]
 [s]
 
-*tag_sleep
+*intro
+[cm]
+22時30分。研究室を出た。[l][r]
+今日もデータが合わなかった。明日もたぶん合わない。[l][r]
+量子線で乗り換え駅まで行き、もつれ線の終電に乗り継げば帰れる。終電まであと40分。[l][r]
+通る改札は3つ。最寄り駅の入場改札、乗り換え駅の連絡改札、降りる駅の出場改札。[l][r]
 
 [cm]
-
-[bg storage=sleep.jpg time=500]
-
-メロスは死んだように深く眠った。[l][r]
-勇者は、ひどく赤面した。[r]
-
-【 BAD END 】[l][cm]
-
-[jump target=*start]
-
-*tag_run
-
-[bg storage=run.jpg time=500]
+[bg storage="gate.png" time=500]
+駅に着くと、改札の様子がおかしい。[l][r]
+「本日より量子改札を導入しました」と貼り紙がある。[l][r]
 
 [cm]
-メロスは黒い風のように走った。[l][r]
-陽は、ゆらゆら地平線に没し、まさに最後の一片の残光も、消えようとした時、メロスは疾風の如く刑場に突入した。間に合った。[r]
+【駅員】[r]
+お客様のICカードは、本日から量子ビットになっております。[l][r]
+改札がカードを測定して、|1⟩ が出れば開きます。|0⟩ なら閉まります。[l][r]
+重ね合わせのまま入ると、確率で弾かれます。[l][r]
 
-【 GOOD END 】[l][cm]
+[cm]
+【駅員】[r]
+弾かれると、運賃として残高が1減り、駅員室での説明で3分かかります。[l][r]
+残高は3。終電まであと40分です。[l][r]
+では、ご乗車ありがとうございます。[l][r]
 
-[jump target=*start]
+[jump storage="st1.ks" target="*start"]
